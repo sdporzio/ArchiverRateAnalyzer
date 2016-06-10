@@ -27,7 +27,7 @@ nSteps = int(diffTime/stepSize)
 
 # Get entries number from startTime to endTime for variable (varName)
 dataOut = []
-varName = voltCM # <- Change this one here
+varName = currCM # <- Change this one here
 loopTimeLeft = startTime
 for i in range(nSteps):
     loopTimeRight = DTO.MoveDatetimeForward(loopTimeLeft,stepSize)
