@@ -1,10 +1,13 @@
-import psycopg2
 import time
 import datetime
 import commands
+import psycopg2
+import numpy as np
+
+npPassword = np.genfromtxt("password.txt",dtype=None)
 
 def GetVarArrayInterval( variable , time_start , time_end ):
-    conn = psycopg2.connect(host="ifdb06.fnal.gov", user='smcreader', password='argon!smcReader',port='5438', database="slowmoncon_archive")
+    conn = psycopg2.connect(host="ifdb06.fnal.gov", user='smcreader', password=npPassword,port='5438', database="slowmoncon_archive")
     cur = conn.cursor()
 
     cur.execute("SELECT smpl_time,float_val FROM sample INNER JOIN channel USING (channel_id)"
@@ -22,7 +25,7 @@ def GetVarArrayInterval( variable , time_start , time_end ):
 
 
 def GetVarArrayLast( variable , time_start  ):
-    conn = psycopg2.connect(host="ifdb06.fnal.gov", user='smcreader', password='argon!smcReader',port='5438', database="slowmoncon_archive")
+    conn = psycopg2.connect(host="ifdb06.fnal.gov", user='smcreader', password=npPassword,port='5438', database="slowmoncon_archive")
     cur = conn.cursor()
 
     cur.execute("SELECT smpl_time,float_val FROM sample INNER JOIN channel USING (channel_id)"
@@ -40,7 +43,7 @@ def GetVarArrayLast( variable , time_start  ):
 
 
 def GetEntriesNumberByName(channelName,startTime,endTime):
-    conn = psycopg2.connect(host="ifdb06.fnal.gov", user='smcreader', password='argon!smcReader',port='5438', database="slowmoncon_archive")
+    conn = psycopg2.connect(host="ifdb06.fnal.gov", user='smcreader', password=npPassword,port='5438', database="slowmoncon_archive")
     cur = conn.cursor()
 
     cur.execute("SELECT smpl_time,float_val FROM sample INNER JOIN channel USING (channel_id) WHERE name = %s and smpl_time > %s and smpl_time < %s;",(channelName,startTime,endTime))
@@ -59,7 +62,7 @@ def GetEntriesNumberByName(channelName,startTime,endTime):
 def GetEntriesNumberById(channelId,startTime,endTime):
     # Great for loops! Not very efficient (row[2] looping is unnecessary)
     # but for now will do.
-    conn = psycopg2.connect(host="ifdb06.fnal.gov", user='smcreader', password='argon!smcReader',port='5438', database="slowmoncon_archive")
+    conn = psycopg2.connect(host="ifdb06.fnal.gov", user='smcreader', password=npPassword,port='5438', database="slowmoncon_archive")
     cur = conn.cursor()
 
     cur.execute("SELECT smpl_time,float_val,name FROM sample INNER JOIN channel USING (channel_id) WHERE channel_id = %s and smpl_time > %s and smpl_time < %s;",(channelId,startTime,endTime))
