@@ -2,9 +2,12 @@ import time
 import datetime
 import commands
 import psycopg2
+import os
 import numpy as np
 
-npPassword = np.genfromtxt("password.txt",dtype=None)
+
+projDir = os.environ.get('PROJDIR_RATEANA')
+npPassword = np.genfromtxt(projDir+"/Modules/password.txt",dtype=None)
 
 def GetVarArrayInterval( variable , time_start , time_end ):
     conn = psycopg2.connect(host="ifdb06.fnal.gov", user='smcreader', password=npPassword,port='5438', database="slowmoncon_archive")
