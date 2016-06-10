@@ -13,9 +13,9 @@ For reasons of security, the password to access the database is not provided in 
 If you have problems send me an email. Or ask, if I'm around.
 
 Prerequisites (as far as I remeber):<br/>
-postgresql<br/>
-psycopg2<br/>
-numpy<br/>
-pytz<br/>
-VPN active (to have access to Fermilab)<br/>
-pyROOT + ipython + jupyter (if you want to plot data with "plotRates.ipynb")
+- postgresql<br/>
+- psycopg2<br/>
+- numpy<br/>
+- pytz<br/>
+- VPN active (to have access to Fermilab)<br/>
+- pyROOT + ipython + jupyter (if you want to plot data with "plotRates.ipynb")
