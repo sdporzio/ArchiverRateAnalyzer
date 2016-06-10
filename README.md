@@ -7,16 +7,10 @@ Run "extractRates.py" to get the rate for the channels and plotRates.ipynb (jupy
 You have to change variables in these two files if you want different channels.
 If you have problems send me an email. Or ask, if I'm around.
 
-Prerequisites (as far as I remeber):
-
-postgresql
-
-psycopg2
-
-numpy
-
-pytz
-
-VPN active (to have access to Fermilab)
-
+Prerequisites (as far as I remeber):<br/>
+postgresql<br/>
+psycopg2<br/>
+numpy<br/>
+pytz<br/>
+VPN active (to have access to Fermilab)<br/>
 pyROOT + ipython + jupyter (if you want to plot data with "plotRates.ipynb")
