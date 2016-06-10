@@ -8,9 +8,15 @@ You have to change variables in these two files if you want different channels.
 If you have problems send me an email. Or ask, if I'm around.
 
 Prerequisites (as far as I remeber):
+
 postgresql
+
 psycopg2
+
 numpy
+
 pytz
+
 VPN active (to have access to Fermilab)
+
 pyROOT + ipython + jupyter (if you want to plot data with "plotRates.ipynb")
