@@ -38,7 +38,7 @@ for k,name in enumerate(varNames['VariableName']):
         loopTimeLeft = loopTimeRight
 
     outPath = "Data/"+name.replace('/','_')+"_"+startTime.strftime('%y%m%d')+"_"+endTime.strftime('%y%m%d')+"_"+str(stepSize)+"s.dat"
-    varPaths.append(projDir+outPath)
+    varPaths.append(projDir+"/"+outPath)
     np.savetxt(outPath,np.array((dataOut)),delimiter=' ',header='Timestamp Rate')
 
 np.savetxt(projDir+'/Data/outList.dat',np.array(varPaths),delimiter=' ',fmt="%s",header='VariablePath')
