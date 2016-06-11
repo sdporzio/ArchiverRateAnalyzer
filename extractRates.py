@@ -12,9 +12,9 @@ import Modules.querySQL as QSQL
 
 # StartTime and endTime for queries
 # In order to correctly advance hour by hour, it should be annoyingly converted to a Unix timestamp (to add 3600 seconds) and then back to a datetime object
-startTime = dt(2015, 9, 1, 0, 0, 0)
-endTime = dt(2016, 6, 1, 0, 0, 0)
-stepSize = 24*60*60 # in seconds
+startTime = dt(2016, 1, 25, 0, 0, 0)
+endTime = dt(2016, 1, 26, 0, 0, 0)
+stepSize = 10*60 # in seconds
 options = [startTime,endTime,stepSize]
 
 # Variable names

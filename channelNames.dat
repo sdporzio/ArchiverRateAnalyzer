@@ -3,15 +3,15 @@ uB_TPCDrift_HV01_keithleyPickOff/getVoltage
 uB_TPCDrift_HV01_keithleyPickOff/voltDiff5s60s
 uB_TPCDrift_HV01_keithleyCurrMon/getVoltage
 uB_TPCDrift_HV01_keithleyCurrMon/calcCurrent
-uB_BeamData_BEAM/Avg_rate_00a9
-uB_TPCDrift_HV01_torscope_CH1/YMULT
-uB_Cryo_IFIX_1_0/AT630
-uB_OnDetPower_TPCPS_1_6_506/MaxTerminalVOLT_RW
-uB_CrateRails_TPC1_1_2/CURR_READ
-uB_DAQStatus_DAQX_evb/AvgBuilder_TrigRate_Paddle
-uB_PMTHV_TRPM_M0C4/VLIM
-uB_RackTemps_DAQ2_1_2/temperature
-uB_ZMON_ZMON_1/adc1_avg
-uB_PCStatus_PCXX_near1/fans_fastest_rpm
-uB_ArPurity_PM02_1/CATHPEAK
-FNAL_WeatherStation_0_WindSpeed
+# uB_BeamData_BEAM/Avg_rate_00a9
+# uB_TPCDrift_HV01_torscope_CH1/YMULT
+# uB_Cryo_IFIX_1_0/AT630
+# uB_OnDetPower_TPCPS_1_6_506/MaxTerminalVOLT_RW
+# uB_CrateRails_TPC1_1_2/CURR_READ
+# uB_DAQStatus_DAQX_evb/AvgBuilder_TrigRate_Paddle
+# uB_PMTHV_TRPM_M0C4/VLIM
+# uB_RackTemps_DAQ2_1_2/temperature
+# uB_ZMON_ZMON_1/adc1_avg
+# uB_PCStatus_PCXX_near1/fans_fastest_rpm
+# uB_ArPurity_PM02_1/CATHPEAK
+# FNAL_WeatherStation_0_WindSpeed
